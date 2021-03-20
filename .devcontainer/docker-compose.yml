@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  main:
+    build:
+      context: .
+      dockerfile: ./ubuntu/Dockerfile
+      args:
+        USER_ID: 1000
+        GROUP_ID: 1000
+        USER_NAME: vscode
+        GROUP_NAME: vscode
+        WORK_DIR: develop
+    env_file: devcontainer.env
+    environment:
+      - TZ=JST-9
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - ~/.aws:/home/vscode/.aws
+      - ~/.ssh:/home/vscode/.ssh
+    command: /bin/sh -c "while sleep 1000; do :; done"
