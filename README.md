@@ -44,6 +44,7 @@
 - GitHub Pull Requests and Issues
 - Code Spell Checker
 - Live Server
+- vscode all markdown
 - Svelte for VS Code
 - Tailwind CSS IntelliSense
 
